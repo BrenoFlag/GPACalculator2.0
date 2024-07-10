@@ -1,0 +1,16 @@
+Create database GPACalculator;
+
+use GPACalculator;
+
+CREATE table User(
+    Username varchar(25) primary key,
+    Password varchar(25) not null
+);
+CREATE TABLE Class(
+    ClassID int auto_increment primary key ,
+    Name varchar(25),
+    CreditAmount int(5),
+    Grade float (5,1),
+    Username varchar(25),
+    FOREIGN KEY (Username) references User(Username)
+);
